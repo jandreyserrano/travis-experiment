@@ -1,1 +1,15 @@
-language: node_js
+sudo: required
+
+language: ruby
+
+services:
+  - docker
+
+before_install:
+- docker pull ubuntu:16.04
+- docker run ubuntu:16.04 grep -v '^#' /etc/apt/sources.list
+- docker ps -a
+# - docker run carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec rake test"
+
+# script:
+# - bundle exec rake test
