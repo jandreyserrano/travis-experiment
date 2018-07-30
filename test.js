@@ -3,7 +3,7 @@ const assert    = require('chai').assert;
 const expect    = require('chai').expect;
 const should = require('chai').should();
 
-const Operations = require('../src/app.js');
+const Operations = require('./app.js');
 
 console.info(Operations)
 
