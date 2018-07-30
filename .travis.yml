@@ -11,6 +11,8 @@ before_install:
  - docker pull ubuntu:16.04
  - docker run ubuntu:16.04 grep -v '^#' /etc/apt/sources.list
  - docker ps -a
+ - npm install mocha
+ - npm install --production
 
 script:
  - npm test
