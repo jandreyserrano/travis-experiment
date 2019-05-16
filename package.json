@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "babel app.js -o ./test/app-compiled.js && babel test.js -o ./test/test.js",
-    "test": "mocha",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "test-coverage": "nyc --reporter=text mocha"
+    "test": "nyc mocha",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "test-report": "nyc --reporter=text mocha"
   },
   "keywords": [],
   "author": "John Serrano <jandreys15@gmail.com> (https://twitter.com/jandrey15)",

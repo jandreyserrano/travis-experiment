@@ -23,4 +23,4 @@ install:
 script:
   - npm run build
   - npm test
-  - npm run coverage
+  - npm run report-coverage
