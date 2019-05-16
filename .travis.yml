@@ -23,4 +23,4 @@ install:
 script:
   - npm run build
   - npm test
-  - codecov
+  - npm run coverage

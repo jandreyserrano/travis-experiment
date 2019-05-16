@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel app.js -o ./test/app-compiled.js && babel test.js -o ./test/test.js",
     "test": "mocha",
-    "coverage": "nyc npm run test"
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "keywords": [],
   "author": "John Serrano <jandreys15@gmail.com> (https://twitter.com/jandrey15)",
