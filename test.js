@@ -3,7 +3,8 @@ const assert    = require('chai').assert;
 const expect    = require('chai').expect;
 const should = require('chai').should();
 
-const Operations = require('./app.js');
+// const Operations = require('./app-compiled');
+import Operations from './app-compiled' // Gracias a babel
 
 console.info(Operations)
 
