@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel app.js -o ./test/app-compiled.js && babel test.js -o ./test/test.js",
     "test": "mocha",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    "coverage": "nyc --reporter=text mocha"
   },
   "keywords": [],
   "author": "John Serrano <jandreys15@gmail.com> (https://twitter.com/jandrey15)",
@@ -16,6 +16,7 @@
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "nyc": "^14.1.1"
   }
 }
