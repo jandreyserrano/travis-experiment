@@ -42,4 +42,6 @@ class Operations {
   }
 }
 
-module.exports = Operations;
+// module.exports = Operations;
+
+export default Operations // Gracias a babel

@@ -4,18 +4,24 @@ language: node_js
 node_js:
   - "lts/*"
 
+cache: npm
+
 services:
   - docker
 
 before_install:
- - docker pull ubuntu:16.04
- - docker run ubuntu:16.04 grep -v '^#' /etc/apt/sources.list
- - docker ps -a
+  - docker pull ubuntu:16.04
+  - docker run ubuntu:16.04 grep -v '^#' /etc/apt/sources.list
+  - docker ps -a
 
 install:
- - npm install mocha
- - npm install --production
- - npm ls
+  # - npm install
+  # - npm install --production
+  - npm install -g codecov
+  - npm install -D nyc
 
 script:
- - npm test
+  - npm run coverage
+
+after_success:
+  - npm run report-coverage

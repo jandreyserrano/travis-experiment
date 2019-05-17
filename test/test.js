@@ -1,11 +1,36 @@
 // const assert = require('assert');
-const assert    = require('chai').assert;
-const expect    = require('chai').expect;
-const should = require('chai').should();
+// const assert    = require('chai').assert;
+// const expect    = require('chai').expect;
+// const should = require('chai').should();
 
-const Operations = require('./app.js');
+import { assert } from 'chai'
+import { expect } from 'chai'
+import 'chai/register-should' // No se puede hacer -> import { should } from 'chai'
 
-console.info(Operations)
+import Operations from '../src/app'
+import msg from '../src/message'
+
+// console.info(Operations)
+// console.info(msg())
+
+describe('Welcome message', function () {
+  it('message is equals Hello world', () => {
+    const str = msg()
+    assert.equal(str, 'Hello world')
+  })
+})
+
+import sayHello from "../src/index"
+
+describe("index test", () => {
+  describe("sayHello function", () => {
+    it("should say Hello guys!", () => {
+
+        const str = sayHello()
+        expect(str).to.equal("Hello guys!")
+    })
+  })
+})
 
 describe('Array', function() {
   describe('#indexOf()', function() {

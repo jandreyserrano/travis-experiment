@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/message.js"],"names":[],"mappings":";;;;;;;eACe,oBAAM;AACnB,SAAO,aAAP;AACD,C","sourcesContent":["\r\nexport default () => {\r\n  return 'Hello world'\r\n}"],"file":"message.js"}
