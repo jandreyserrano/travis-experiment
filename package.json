@@ -35,7 +35,8 @@
     "exclude": [
       "**/*.spec.js",
       "**/test/**",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "**/dist/**"
     ]
   }
 }
