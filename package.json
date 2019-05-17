@@ -11,7 +11,7 @@
     "watch:test": "npm t -- -w",
     "test": "mocha --require @babel/register",
     "coverage": "nyc npm t",
-    "report-coverage": "cat ./coverage/lcov.info | codecov"
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "keywords": [],
   "author": "John Serrano <jandreys15@gmail.com> (https://twitter.com/jandrey15)",
