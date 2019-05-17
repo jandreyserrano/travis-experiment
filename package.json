@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "babel app.js -o ./test/app-compiled.js && babel test.js -o ./test/test.js",
+    "build": "babel ./src/app.js -o ./src/app-compiled.js && babel ./src/message.js -o ./src/message-compiled.js",
     "test": "nyc mocha",
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "test-report": "nyc --reporter=text mocha"
@@ -16,8 +16,8 @@
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
-    "chai": "^4.1.2",
-    "mocha": "^5.2.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
     "nyc": "^14.1.1"
   }
 }
