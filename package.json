@@ -8,9 +8,9 @@
     "build": "babel src --out-dir ./dist --source-maps",
     "serve": "node ./dist/index.js",
     "debug": "node --inspect-brk ./dist/index.js",
-    "test": "nyc mocha --require @babel/register",
-    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "test-report": "nyc --reporter=text mocha --require @babel/register"
+    "test": "mocha --require @babel/register",
+    "test-coverage": "nyc --reporter=text mocha --require @babel/register",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "keywords": [],
   "author": "John Serrano <jandreys15@gmail.com> (https://twitter.com/jandrey15)",
@@ -25,5 +25,16 @@
     "mocha": "^6.1.4",
     "nodemon": "^1.19.0",
     "nyc": "^14.1.1"
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "**/*.spec.js",
+      "**/test/**",
+      "**/node_modules/**"
+    ]
   }
 }

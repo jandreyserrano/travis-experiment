@@ -15,12 +15,11 @@ before_install:
   - docker ps -a
 
 install:
-  - npm install
+  # - npm install
+  # - npm install --production
   - npm install -g codecov
   - npm install -D nyc
-  # - npm install --production
 
 script:
-  - npm run build
   - npm test
-  - npm run report-coverage
+  - npm run coverage
