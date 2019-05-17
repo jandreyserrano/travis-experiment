@@ -73,3 +73,4 @@ function () {
 var _default = Operations; // Gracias a babel
 
 exports["default"] = _default;
+//# sourceMappingURL=app.js.map

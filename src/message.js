@@ -1,4 +1,4 @@
 
 export default () => {
-  return 'Hola mundo'
+  return 'Hello world'
 }
