@@ -21,6 +21,7 @@ install:
   - npm install -D nyc
 
 script:
+  - npm run build
   - npm run coverage
 
 after_success:
