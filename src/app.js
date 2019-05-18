@@ -9,7 +9,7 @@ class Operations {
     return this.calcSum();
   }
 
-  calcSum() {    
+  calcSum() {   
     this.c = this.a + this.b;
     return {
       value: this.c,
